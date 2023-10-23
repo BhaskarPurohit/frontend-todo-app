@@ -25,12 +25,13 @@ function App() {
 
   return (
     <>
-      <h1>Hello there</h1>
-      {todos.title}
-      {todos.description}
-      {todos.id}
-      <p>my name is bhaskar</p>
-      <PersonName firstName= {todos.title} lastName={"Wayne"}/>
+      <div>
+        {todos[0].title}
+        {todos[0].description}
+        <br />
+        {todos[1].title}
+        {todos[1].description}
+      </div>
     </>
   )
  
