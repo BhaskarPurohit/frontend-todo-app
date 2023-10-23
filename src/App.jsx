@@ -4,11 +4,16 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-   const [todos, setTodos] = React.useState({
+   const [todos, setTodos] = React.useState([{
     title:"go to the gym" + Math.random()*10,
     description:"train arms",
     id:1    
-   })
+   },
+  {
+    title:"go to the class",
+    description:"take coding classes from harkirat",
+    id:2
+  }])
 
    setInterval(()=>{
     setTodos({
