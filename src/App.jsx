@@ -4,25 +4,40 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-   var todos =[{
-    title:"go to the gym",
-    description:"do arm workout",
-    id:1 
-   },
-  {
-    title:"go shopping",
-    description:"go to the mall and buy an iPhone",
-    id:2
-  }]  
+   const [todos, setTodos] = React.useState({
+    title:"go to the gym" + Math.random()*10,
+    description:"train arms",
+    id:1    
+   })
+
+   setInterval(()=>{
+    setTodos({
+      id:"eat lunch",
+      description:"cook and then eat lunch",
+      id:3 
+     })
+   },2000)
 
   return (
     <>
       <h1>Hello there</h1>
-      <h1>{todos.title }
-      { todos.description}
-      { todos.id}</h1>
+      {todos.title}
+      {todos.description}
+      {todos.id}
+      <p>my name is bhaskar</p>
+      <PersonName firstName= {todos.title} lastName={"Wayne"}/>
     </>
   )
+ 
+}
+
+function PersonName (){
+  return
+    <div>
+       {props.firstName}
+      
+    </div>
+  
 }
 
 export default App
