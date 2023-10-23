@@ -17,9 +17,9 @@ function App() {
 
    setInterval(()=>{
     setTodos({
-      id:"eat lunch",
+      title:"eat lunch",
       description:"cook and then eat lunch",
-      id:3 
+      id:1 
      })
    },2000)
 
