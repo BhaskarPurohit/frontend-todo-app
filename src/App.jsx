@@ -15,29 +15,35 @@ function App() {
     id:2
   }])
 
-  
+  React.useEffect(()=>{
+    setInterval(()=>{
+      setTodos({
+       title:"cook"+ Math.random()*10,
+       description:"cook dinner for today",
+       id:1
+ 
+      })
+   },2000)
+  },[])
+
+ 
 
   return (
-    <>
+    
       <div>
-        {todos[0].title}
-        {todos[0].description}
-        <br />
-        {todos[1].title}
-        {todos[1].description}
-      </div>
-    </>
+        {todos.title}
+        {todos.description}
+      </div> 
+    
   )
  
 }
 
-function PersonName (){
-  return
-    <div>
-       {props.firstName}
-      
-    </div>
-  
+function Todos(props){
+  return <div>
+    {props.title}
+    {props.description}
+  </div>
 }
 
 export default App
